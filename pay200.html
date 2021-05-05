@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+      var stripe = Stripe(
+
+      'pk_test_51InhAWCNaS14E2hRKpsfpyKXdFgqsJoBXGWqZKOUxmDOM3IGbiNWqlsEqeYliblN3I1Gl7d9wD2d6AOSORtvY17000UH7Oc5yi'
+      );
+
+      stripe.redirectToCheckout({
+        lineItems: [{
+          price: 'price_1InhCUCNaS14E2hRH1rb3wR5', // Replace with the ID of your price
+          quantity: 1,
+        }],
+        mode: 'payment',
+      //  successUrl: 'https://example.com/success',
+      //  cancelUrl: 'https://example.com/cancel',
+      }).then(function (result) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer
+        // using `result.error.message`.
+      });
+    </script>
+  </head>
+  <body>
+    Something went wrong ... Go back and try once more.
+  </body>
+</html>
