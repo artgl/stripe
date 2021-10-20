@@ -1,0 +1,12 @@
+<html>
+<body>
+Test
+<span id=s1></span>
+<script>
+let s = '';
+for(let i in localStorage)
+  s = s + i + ' ';
+document.getElementById("s1").textContent=s;
+</script>
+</body>
+</html>
